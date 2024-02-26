@@ -1,0 +1,55 @@
+[
+  {
+    "studentId": 1,
+    "studentName": "John Doe",
+    "studentClass": "10A",
+    "grades": [
+      { "subject": "Math", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Math", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Math", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Math", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Math", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Math", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Math", "term1": 85, "term2": 90, "term3": 88 }
+    ]
+  },
+  {
+    "studentId": 2,
+    "studentName": "Jane Kim",
+    "studentClass": "10B",
+    "grades": [
+      { "subject": "Math", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "English", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Chemistry", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "History", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Geography", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "French", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Art", "term1": 85, "term2": 90, "term3": 88 }
+    ]
+  },
+  {
+    "studentId": 3,
+    "studentName": "Sam Altman",
+    "studentClass": "10C",
+    "grades": [
+      { "subject": "Math", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "English", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Chemistry", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Physics", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Biology", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Music", "term1": 85, "term2": 90, "term3": 88 }
+    ]
+  },
+  {
+    "studentId": 4,
+    "studentName": "Cindy Buckley",
+    "studentClass": "10D",
+    "grades": [
+      { "subject": "Math", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "English", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Swahili", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "German", "term1": 85, "term2": 90, "term3": 88 },
+      { "subject": "Chemistry", "term1": 85, "term2": 90, "term3": 88 }
+    ]
+  }
+]

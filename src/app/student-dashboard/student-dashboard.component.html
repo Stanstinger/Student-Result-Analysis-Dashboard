@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row">
+    <div class="card w-50 mb-3 mt-4">
+      <div class="card-body">
+        <h4 class="card-title">
+          Welcome to your Dashboard, {{ student.studentName }}
+        </h4>
+        <h5 class="card-text">Class: {{ student.studentClass }}</h5>
+        <span>Subjects Taken: {{ student.grades.length }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 card mt-4 rounded p-0">
+      <table class="table table-success table-striped m-0">
+        <thead>
+          <tr>
+            <th scope="col">Subject</th>
+            <th scope="col">Term 1</th>
+            <th scope="col">Term 2</th>
+            <th scope="col">Term 3</th>
+            <th scope="col">Average Points</th>
+            <th scope="col">Average Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (grade of student.grades; track grade.subject) {
+
+          <tr>
+            <td>{{ grade.subject }}</td>
+            <td>{{ grade.term1 }}</td>
+            <td>{{ grade.term2 }}</td>
+            <td>{{ grade.term3 }}</td>
+            <td>{{ calculateAverage(grade) }}</td>
+            <td>{{ calculateGrade(calculateAverage(grade)) }}</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+    <div class="col-6 d-flex justify-content-center align-self-center">
+      <app-dynamic-chart [grades]="student.grades"></app-dynamic-chart>
+    </div>
+  </div>
+</div>

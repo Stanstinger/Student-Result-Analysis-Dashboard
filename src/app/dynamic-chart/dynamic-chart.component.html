@@ -1,0 +1,15 @@
+<canvas
+  class="chart"
+  baseChart
+  height="300px"
+  width="500px"
+  [data]="barChartData"
+  [options]="barChartOptions"
+  [type]="barChartType"
+  (chartHover)="chartHovered($event)"
+  (chartClick)="chartClicked($event)"
+>
+</canvas>
+<button mat-button mat-raised-button color="primary" (click)="randomize()">
+  Update
+</button>
