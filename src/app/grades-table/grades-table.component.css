@@ -1,0 +1,12 @@
+.table > thead tr {
+  color: #fff;
+  text-align: left;
+}
+
+tr.highlight th {
+  background-color: #293b5f;
+  color: #fff;
+}
+
+@media (max-width: 614px) {
+}

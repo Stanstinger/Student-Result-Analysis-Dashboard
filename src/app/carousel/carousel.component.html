@@ -1,0 +1,24 @@
+<div class="slider">
+  <h4 class="mb-3">Recommendations & Remarks</h4>
+  <div>
+    <div class="left-arrow" (click)="prevSlide()">
+      <i class="bx bxs-chevron-left"></i>
+    </div>
+    <div class="right-arrow" (click)="nextSlide()">
+      <i class="bx bx-chevron-right"></i>
+    </div>
+  </div>
+  <div class="slide card">
+    <div class="rec-card" [class.active]="currentIndex === 0">
+      <h3>{{ grades[currentIndex]?.subject }}</h3>
+      <p>
+        <strong>Remark:</strong>
+        {{ generateRemark(calculateAverage(grades[currentIndex])) }}
+      </p>
+      <p>
+        <strong>Recommendation:</strong>
+        {{ generateRecommendation(calculateAverage(grades[currentIndex])) }}
+      </p>
+    </div>
+  </div>
+</div>

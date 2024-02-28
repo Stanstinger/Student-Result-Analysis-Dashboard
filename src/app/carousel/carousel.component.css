@@ -1,0 +1,39 @@
+.slide {
+  width: 100%;
+  border-radius: 0.5rem;
+  background-size: cover;
+  background-position: center;
+  padding: 1rem 2.5rem;
+}
+
+.right-arrow {
+  position: absolute;
+  top: 60%;
+  transform: translate(0, -50%);
+  right: 8px;
+  font-size: 2rem;
+  color: #8b0909;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.left-arrow {
+  position: absolute;
+  top: 60%;
+  transform: translate(0, -50%);
+  left: 4px;
+  font-size: 2rem;
+  color: #940909;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.slider {
+  position: relative;
+  height: 100%;
+}
+
+.dotsContainer {
+  display: flex;
+  justify-content: center;
+}

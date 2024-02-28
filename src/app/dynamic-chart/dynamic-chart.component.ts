@@ -69,9 +69,7 @@ export class DynamicChartComponent implements OnInit {
   }: {
     event?: ChartEvent;
     active?: object[];
-  }): void {
-    console.log(event, active);
-  }
+  }): void {}
 
   public chartHovered({
     event,
@@ -79,9 +77,7 @@ export class DynamicChartComponent implements OnInit {
   }: {
     event?: ChartEvent;
     active?: object[];
-  }): void {
-    console.log(event, active);
-  }
+  }): void {}
 
   public randomize(): void {
     this.barChartType = this.barChartType === 'bar' ? 'line' : 'bar';

@@ -1,0 +1,30 @@
+<div>
+  <h3 class="fw-bold fs-4 my-3">Grades Scored</h3>
+  <div class="card p-0">
+    <table class="table table-success table-striped m-0">
+      <thead>
+        <tr class="highlight">
+          <th scope="col">Subject</th>
+          <th scope="col">Term 1</th>
+          <th scope="col">Term 2</th>
+          <th scope="col">Term 3</th>
+          <th scope="col">Average Points</th>
+          <th scope="col">Average Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (grade of grades; track grade.subject) {
+
+        <tr>
+          <td>{{ grade.subject }}</td>
+          <td>{{ grade.term1 }}</td>
+          <td>{{ grade.term2 }}</td>
+          <td>{{ grade.term3 }}</td>
+          <td>{{ calculateAverage(grade) }}</td>
+          <td>{{ calculateGrade(calculateAverage(grade)) }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>

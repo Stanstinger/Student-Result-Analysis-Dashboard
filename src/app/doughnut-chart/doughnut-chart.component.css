@@ -1,0 +1,48 @@
+.chart-heading {
+  font-family: "Poppins", sans-serif;
+  color: #023047;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+}
+
+.donut-chartcontainer {
+  width: 200px;
+}
+
+.donut-stats {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  gap: 2.5rem;
+  width: fit-content;
+  align-items: center;
+  box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  border-radius: 0.5rem;
+  color: #023047;
+  transition: all 400ms ease;
+}
+
+.donut-stats:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.3);
+}
+
+.donut-stats .subject-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.donut-stats .subject-details ul li {
+  margin: 0.5rem 0;
+  text-transform: uppercase;
+}
+
+.donut-stats .subject-details .percentage {
+  font-weight: 600;
+  color: #e63946;
+}
+
+@media (max-width: 540px) {
+}

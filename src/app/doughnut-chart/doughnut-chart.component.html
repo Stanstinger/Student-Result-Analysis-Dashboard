@@ -1,0 +1,25 @@
+<div class="donut-container">
+  <h5 class="chart-heading">Average Review</h5>
+  <div class="donut-stats">
+    <div class="donut-chartcontainer">
+      <canvas
+        baseChart
+        class="chart"
+        [data]="doughnutChartData"
+        [type]="doughnutChartType"
+        [options]="doughnutChartOptions"
+      >
+      </canvas>
+    </div>
+    <div class="subject-details">
+      <ul>
+        @for (label of doughnutChartLabels; track label; let index = $index ) {
+        <li>
+          {{ label }}:
+          <span class="percentage">{{ calculatePercentage(index) }}%</span>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</div>

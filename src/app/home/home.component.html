@@ -1,59 +1,66 @@
-<div class="container d-flex justify-content-center align-items-center">
-  <div class="w-50 mt-4">
-    <h1>RESULT ANALYSIS DASHBOARD</h1>
-    <p>
-      This is a simulation of a result analysis application that has a
-      functionality to display a personalised dashboard for each student,
-      detailing their performance metrics and educational progress
-    </p>
-  </div>
-  <div class="card mt-4 rounded p-0 w-75">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Student Name</th>
-          <th scope="col">Student ID</th>
-          <th scope="col">Class</th>
-          <th scope="col">Subjects</th>
-          <th scope="col"></th>
-        </tr>
-      </thead>
-      <tbody>
-        @for (student of students; track student.studentId) {
-        <tr>
-          <th scope="row">
-            <span
-              class="d-inline-flex align-items-center justify-content-center text-white rounded-circle m-1 me-2"
-              style="background-color: #0082ca; width: 40px; height: 40px"
-            >
-              <i class="bx bx-user"></i>
-            </span>
-          </th>
-          <td>
-            <h6>{{ student.studentName }}</h6>
-          </td>
-          <td>
-            <h6>{{ student.studentId }}</h6>
-          </td>
-          <td>
-            <p>{{ student.studentClass }}</p>
-          </td>
-          <td>
-            <p>{{ student.grades.length }}</p>
-          </td>
-          <td>
-            <button
-              type="button"
-              class="btn btn-primary"
-              (click)="viewDashboard(student)"
-            >
-              View Dashboard
-            </button>
-          </td>
-        </tr>
-        }
-      </tbody>
-    </table>
+<div class="container-fluid g-4">
+  <div class="row">
+    <div class="col-12 col-xl-5 title-container">
+      <div class="hero-logo">EDU-LEARN</div>
+      <div class="app-description">
+        <h1>RESULT ANALYSIS DASHBOARD</h1>
+        <p>
+          This is a simulation of a result analysis application that has a
+          functionality to display a personalised dashboard for each student,
+          detailing their performance metrics and educational progress. I have
+          provided a table with students mock data to test the dashboard.
+        </p>
+      </div>
+    </div>
+    <div class="col-12 col-xl-6 table-container">
+      <div class="card p-0">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Student Name</th>
+              <th scope="col">Student ID</th>
+              <th scope="col">Class</th>
+              <th scope="col">Subjects</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (student of students; track student.studentId) {
+            <tr class="table-row">
+              <th scope="row">
+                <span
+                  class="table-icon d-inline-flex align-items-center justify-content-center text-white rounded-circle m-1 me-2"
+                >
+                  <i class="bx bx-user"></i>
+                </span>
+              </th>
+              <td>
+                <h6>{{ student.studentName }}</h6>
+              </td>
+              <td>
+                <h6>{{ student.studentId }}</h6>
+              </td>
+              <td>
+                <p>{{ student.studentClass }}</p>
+              </td>
+              <td>
+                <p>{{ student.grades.length }}</p>
+              </td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  (click)="viewDashboard(student)"
+                >
+                  View Dashboard
+                </button>
+              </td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
