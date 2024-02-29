@@ -158,6 +158,7 @@ a.sidebar-link:hover {
 
 .content {
   flex: 1 1 auto;
+  padding: 1.5rem 1rem;
 }
 
 .review-container {
@@ -197,6 +198,10 @@ a.sidebar-link:hover {
   }
 
   .sidebar-nav {
+    padding: 0;
+  }
+
+  .content {
     padding: 0;
   }
 }

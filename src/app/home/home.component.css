@@ -44,7 +44,7 @@
   background-color: #0082ca;
 }
 
-@media (max-width: 614px) /* … */ {
+@media (max-width: 614px) {
   .title-container {
     margin: 0;
     gap: 2rem;
@@ -56,7 +56,7 @@
   }
 }
 
-@media (max-width: 574px) /* … */ {
+@media (max-width: 574px) {
   .container-fluid {
     padding: 0.5rem;
   }
@@ -90,5 +90,15 @@
     width: 3.5rem;
     height: 2rem;
     font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .title-container {
+    margin-bottom: 1rem;
+  }
+
+  .table-container {
+    margin-top: 1rem;
   }
 }

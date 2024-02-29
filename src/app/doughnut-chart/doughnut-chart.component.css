@@ -44,5 +44,9 @@
   color: #e63946;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 400px) {
+  .donut-stats {
+    margin: 0;
+    padding: 0.5rem;
+  }
 }

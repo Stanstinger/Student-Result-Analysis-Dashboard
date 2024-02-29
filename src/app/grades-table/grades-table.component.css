@@ -9,4 +9,27 @@ tr.highlight th {
 }
 
 @media (max-width: 614px) {
+  .title-container {
+    margin: 0;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .table-container {
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 574px) {
+  .table thead tr {
+    font-size: 0.75rem;
+  }
+
+  .table tbody td {
+    font-size: 0.75rem;
+  }
+
+  .table .table-row td h6 {
+    font-size: 0.75rem;
+  }
 }
