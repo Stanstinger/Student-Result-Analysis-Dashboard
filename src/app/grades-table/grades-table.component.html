@@ -13,13 +13,16 @@
         </tr>
       </thead>
       <tbody>
+        <!-- Loop through grades data to display in the table -->
         @for (grade of grades; track grade.subject) {
 
         <tr>
+          <!-- Displaying grade information -->
           <td>{{ grade.subject }}</td>
           <td>{{ grade.term1 }}</td>
           <td>{{ grade.term2 }}</td>
           <td>{{ grade.term3 }}</td>
+          <!-- Calculating and displaying average points and grade -->
           <td>{{ calculateAverage(grade) }}</td>
           <td>{{ calculateGrade(calculateAverage(grade)) }}</td>
         </tr>

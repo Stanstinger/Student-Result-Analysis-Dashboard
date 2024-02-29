@@ -14,13 +14,14 @@ export class DynamicChartComponent implements OnInit {
   @Input() grades: any[] = [];
   @ViewChild(BaseChartDirective) chart: BaseChartDirective | undefined;
 
+  // Chart configuration options
   public barChartOptions: ChartConfiguration['options'] = {
     elements: {
       line: {
         tension: 0.4,
       },
     },
-    // We use these empty structures as placeholders for dynamic theming.
+
     scales: {
       x: {},
       y: {
@@ -32,9 +33,13 @@ export class DynamicChartComponent implements OnInit {
     },
   };
 
+  // Array to hold chart labels
   public barChartLabels: string[] = [];
+
+  // Chart type (bar chart)
   public barChartType: ChartType = 'bar';
 
+  // Chart data (labels and datasets)
   public barChartData: ChartData<'bar'> = {
     labels: [],
     datasets: [],
@@ -43,6 +48,7 @@ export class DynamicChartComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    // Initialize chart data if grades data is available
     if (this.grades && this.grades.length > 0) {
       // Initialize labels from subject names
       this.barChartLabels = this.grades.map((grade) => grade.subject);

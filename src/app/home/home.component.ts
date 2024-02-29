@@ -3,7 +3,6 @@ import { Student } from '../../shared/models/student.model';
 import { Router } from '@angular/router';
 import { StudentService } from '../student.service';
 
-
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -16,6 +15,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router, private studentService: StudentService) {}
 
+  // Function to navigate to the student dashboard
   viewDashboard(student: Student): void {
     this.router.navigate([
       '/student-dashboard',

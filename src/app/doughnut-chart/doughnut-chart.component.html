@@ -13,6 +13,7 @@
     </div>
     <div class="subject-details">
       <ul>
+        <!-- Loop through doughnut chart labels to display subject details -->
         @for (label of doughnutChartLabels; track label; let index = $index ) {
         <li>
           {{ label }}:

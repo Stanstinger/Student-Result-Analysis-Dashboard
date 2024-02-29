@@ -27,6 +27,7 @@ export class StudentDashboardComponent {
   constructor(private route: ActivatedRoute, private renderer: Renderer2) {}
 
   ngOnInit(): void {
+    // Subscribing to route params to get the student data.
     this.route.paramMap.subscribe((params) => {
       const studentJSON = params.get('student');
       if (studentJSON !== null) {
@@ -46,6 +47,7 @@ export class StudentDashboardComponent {
     }
   }
 
+  // Function to calculate total average and grade.
   calculateTotalAverage(): { average: number; total: number } {
     let total = 0;
     this.student.grades.forEach((grade) => {
@@ -56,6 +58,7 @@ export class StudentDashboardComponent {
     return { average, total };
   }
 
+  // Function to calculate total grade based on average.
   calculateTotalGrade(totalAverage: number): string {
     if (totalAverage >= 80) {
       return 'A';

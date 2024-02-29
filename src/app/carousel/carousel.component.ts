@@ -15,6 +15,7 @@ export class CarouselComponent {
 
   ngOnInit(): void {}
 
+  // Function to calculate average grade
   calculateAverage(grade: {
     subject: string;
     term1: number;
@@ -25,6 +26,7 @@ export class CarouselComponent {
     return Math.round(average);
   }
 
+  // Function to generate remark based on average grade
   generateRemark(average: number): string {
     if (average >= 80) {
       return 'Excellent performance!';
@@ -39,6 +41,7 @@ export class CarouselComponent {
     }
   }
 
+  // Function to generate recommendation based on average grade
   generateRecommendation(average: number): string {
     if (average >= 80) {
       return 'Continue with the good work and aim for even higher grades!';
@@ -53,6 +56,7 @@ export class CarouselComponent {
     }
   }
 
+  // Function to move to the previous slide in the carousel
   prevSlide(): void {
     if (this.currentIndex === 0) {
       this.currentIndex = this.grades.length - 1;
@@ -61,6 +65,7 @@ export class CarouselComponent {
     }
   }
 
+  // Function to move to the next slide in the carousel
   nextSlide(): void {
     if (this.currentIndex === this.grades.length - 1) {
       this.currentIndex = 0;

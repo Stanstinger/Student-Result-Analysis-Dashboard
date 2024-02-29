@@ -12,6 +12,7 @@ import { NgChartsModule } from 'ng2-charts';
 export class DoughnutChartComponent implements OnInit {
   @Input() grades: any[] = [];
 
+  // Doughnut chart labels and data
   public doughnutChartLabels: string[] = [];
   public doughnutChartData: ChartData<'doughnut'> = {
     labels: this.doughnutChartLabels,
@@ -34,6 +35,7 @@ export class DoughnutChartComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+    // Process grades data to populate chart
     this.processGrades();
   }
 
@@ -72,15 +74,12 @@ export class DoughnutChartComponent implements OnInit {
       labels: this.doughnutChartLabels,
       datasets: [{ data: averages }],
     };
-
-    // Log labels and dataset
-    console.log('Labels:', this.doughnutChartLabels);
-    console.log('Datasets:', this.doughnutChartData.datasets);
   }
 
+  // Function to calculate percentage for a subject
   calculatePercentage(index: number): number {
     if (this.doughnutChartData.datasets.length === 0) {
-      return 0; // return 0 if datasets are not available yet
+      return 0;
     }
     const totalAverage = this.doughnutChartData.datasets[0].data.reduce(
       (total, val) => total + val,
@@ -88,7 +87,7 @@ export class DoughnutChartComponent implements OnInit {
     );
     const subjectAverage = this.doughnutChartData.datasets[0].data[index];
     const percentage = (subjectAverage / totalAverage) * 100;
-    return Math.round(percentage); // round off the percentage to the nearest integer
+    return Math.round(percentage);
   }
 
   // events
